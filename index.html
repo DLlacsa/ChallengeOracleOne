@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titulo de pagina Daniel</title>
+    <script type="text/javascript" src="logica.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logo aplicacion encriptar">
+    </header>
+    <main>
+        <section class="seccion1">
+            <textarea class="textarea" placeholder="Ingrese el texto aqui" id="entrada"></textarea>
+            <div class="contenedor_botones">
+                <input type="button" value="Encriptar" class="boton_encriptar" id="encriptar">
+                <input type="button" value="Desencriptar" class="boton_desencriptar" id="desencriptar">
+            </div>
+        </section>
+        <section class="seccion2">
+            <div class="contenedor_imagen">
+                <img src="img/Muñeco.png" alt="Muñeco" id="ocultar1">
+                <textarea name="resultado" id="salida" class="textarea" rows="4" cols="50"></textarea>
+            </div>
+            <div class="contenedor_subtitulo">
+                <h3 id="ocultar2">Ningún mensaje fue encontrado</h3>
+                <p id="ocultar3">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <div class="contenedor_botones">
+                    <input type="button" value="Copiar" class="boton_copiar" id="copiar">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    var btn1 = document.querySelector("#encriptar");
+    btn1.onclick = encriptar;
+    var btn2 = document.querySelector("#desencriptar");
+    btn2.onclick = desencriptar;
+    var btn3 = document.querySelector("#copiar");
+    btn3.onclick = copiar;
+</script>
+</html>
